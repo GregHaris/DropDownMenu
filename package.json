@@ -7,7 +7,12 @@
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "deploy": "git subtree push --prefix dist origin gh-pages",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky",
+    "format:check": "prettier . --check",
+    "format": "prettier . --write",
+    "lint": "eslint . ",
+    "lint:fix": "eslint . --fix "
   },
   "keywords": [],
   "author": "\"Greg Haris <d.gregharis@gmail.com>",
@@ -24,13 +29,19 @@
     "@eslint/js": "^9.9.1",
     "css-loader": "^7.1.2",
     "eslint": "^9.9.1",
+    "eslint-config-prettier": "^9.1.0",
     "globals": "^15.9.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.0",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10",
     "mini-css-extract-plugin": "^2.9.1",
     "prettier": "3.3.3",
     "style-loader": "^4.0.0",
     "webpack-dev-server": "^5.0.4",
     "webpack-merge": "^6.0.1"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
