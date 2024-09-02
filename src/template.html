@@ -1,15 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todo List</title>
-</head>
-
-<body>
-  <div class="container">
-  </div>
-</body>
-
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li class="nav-link"><a href="#">Home</a></li>
+          <li class="nav-link services" id="services">
+            <a href="#">Services</a>
+            <ul class="drop-down" id="dropDownList" hidden>
+              <li>Service 1</li>
+              <li>Service 2</li>
+              <li>Service 3</li>
+            </ul>
+          </li>
+          <li class="nav-link"><a href="#">About</a></li>
+          <li class="nav-link"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </body>
 </html>
